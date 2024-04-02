@@ -1,0 +1,284 @@
+* {
+	font-family: sans-serif;
+}
+
+body {
+	background-color: #D24F18;
+	text-align: center;
+}
+
+#edit-screen {
+	display: none;
+}
+
+#add-screen {
+	display: none;
+}
+
+h1 {
+	display: inline;
+	font-size: 4rem;
+	font-style: italic;
+	color: #C8C8C8;
+	margin-top: 2rem;
+}
+
+.fa-fire, span {
+	font-size: 3.5rem;
+	color: #C8C8C8;
+	margin-top: 2rem;
+}
+
+#list {
+	max-width: 48rem;
+	margin: auto;
+	border: 0.5rem solid #1A4D5B;
+	border-radius: 0.5rem;
+	margin-top: 2rem;
+}
+
+#recipes {
+	list-style-type: none;
+	text-align: left;
+	max-width: 48rem;
+	background-color: #1A4D5B;
+	overflow-y: auto;
+	height: 8rem;
+	margin: auto;
+}
+
+#recipes li {
+	font-size: 1.2rem;
+	font-style: italic;
+	margin-left: -2.5rem;
+	padding: 0.5rem;
+	font-weight: 800;
+	cursor: pointer;
+}
+
+#recipes li:nth-of-type(even) {
+	background-color: #D24F18;
+	color: #C8C8C8;
+}
+
+#recipes li:nth-of-type(odd) {
+	color: #D24F18;
+}
+
+#recipes li:hover {
+	color: #411F2D;
+}
+
+#current-recipe div:first-of-type {
+	background-color: #1A4D5B;
+	max-width: 48rem;
+	margin: auto;
+	border: 0.5rem solid #1A4D5B;
+	border-radius: 0.5rem 0.5rem 0 0;
+	text-align: left;
+	margin-top: 0.5rem;
+	color: #C8C8C8;
+	font-weight: 800;
+	font-style: italic;
+	font-size: 1.5rem;
+}
+
+#current-recipe h2 {
+	display: inline;
+}
+
+#current-recipe i {
+	padding: 0.5rem;
+	cursor: pointer;
+	font-size: 1.8rem;
+	color: #411F2D;
+}
+
+#current-recipe i:hover {
+	color: #D24F18;
+}
+
+#display {
+	max-width: 48rem;
+	margin: auto;
+	margin-top: 0rem;
+	background-color: #411F2D;
+	color: #C8C8C8;
+	text-align: left;
+	padding: 0.5rem;
+	overflow-y: auto;
+	height: 24rem;
+}
+
+#display h3 {
+	font-weight: 800;
+	font-style: italic;
+}
+
+#current-recipe div:last-of-type {
+	background-color: #1A4D5B;
+	max-width: 48rem;
+	margin: auto;
+	border: 0.5rem solid #1A4D5B;
+	border-radius: 0 0 0.5rem 0.5rem;
+	text-align: left;
+	font-size: 1.5rem;
+}
+
+#edit-screen {
+	position: fixed;
+	z-index: 999;
+	height: 32rem;
+	width: 32rem;
+	background-color: #556293;
+	border-radius: 0.5rem;
+	color: #C8C8C8;
+	display: none;
+	margin-left: 50vw;
+	margin-top: 50vh;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 0 0.5rem black;
+}
+
+#edit-screen input, #edit-screen textarea {
+	color: #141723;
+	background-color: #616575;
+	border: 0.1rem solid #7E8396;
+}
+
+#edit-screen input {
+	width: 24rem;
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+#edit-screen label, #edit-screen h3 {
+	font-weight: 800;
+	font-style: italic;
+	font-size: 1.2rem;
+}
+
+#edit-screen textarea {
+	resize: vertical;
+	width: 24rem;
+}
+
+#recipe-ingredients {
+	height: 4rem;
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+#recipe-directions {
+	height: 8rem;
+	margin-top: 0.5rem;
+}
+
+#edit-screen-save-btn, #edit-screen-close-btn {
+	background-color: #141723;
+	color: #411F2D;
+	border: none;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	font-weight: 800;
+	margin-top: 1.6rem;
+	margin-left: 0.2rem;
+	cursor: pointer;
+}
+
+#edit-screen-save-btn:hover, #edit-screen-close-btn:hover {
+	color: #D24F18;
+}
+
+#overlay {
+	display: none;
+	background-color: black;
+	position: fixed;
+	left: 0;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	opacity: 50%;
+	z-index: 998;
+}
+
+#add-screen {
+	position: fixed;
+	z-index: 999;
+	height: 32rem;
+	width: 32rem;
+	background-color: #556293;
+	border-radius: 0.5rem;
+	color: #C8C8C8;
+	display: none;
+	margin-left: 50vw;
+	margin-top: 50vh;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 0 0.5rem black;
+}
+
+#add-screen input, #add-screen textarea {
+	color: #141723;
+	background-color: #616575;
+	border: 0.1rem solid #7E8396;
+}
+
+#add-screen input {
+	width: 24rem;
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+#add-screen label, #add-screen h3 {
+	font-weight: 800;
+	font-style: italic;
+	font-size: 1.2rem;
+}
+
+#add-screen textarea {
+	resize: vertical;
+	width: 24rem;
+}
+
+#recipe-ingredients-add {
+	height: 4rem;
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+#recipe-directions-add {
+	height: 8rem;
+	margin-top: 0.5rem;
+}
+
+#add-screen-add-btn, #add-screen-close-btn {
+	background-color: #141723;
+	color: #411F2D;
+	border: none;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	font-weight: 800;
+	margin-top: 1.6rem;
+	margin-left: 0.2rem;
+	cursor: pointer;
+}
+
+#add-screen-add-btn:hover, #add-screen-close-btn:hover {
+	color: #D24F18;
+}
+
+#overlay {
+	display: none;
+	background-color: black;
+	position: fixed;
+	left: 0;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	opacity: 50%;
+	z-index: 998;
+}

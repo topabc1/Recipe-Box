@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Box</title>
+    <link rel="stylesheet" href="../recipebox/recipebox.css">
+    <script src="../recipebox/recipebox.js"></script>
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/6c9ee3040f.js" crossorigin="anonymous"></script>
+
+    <div id="overlay"></div>
+    
+    <div id="edit-screen">
+        <h3>Edit Recipe</h3>
+        <label for="recipe-title">Recipe</label><br />
+        <input id="recipe-title" type="text" /><br />
+        <label for="recipe-ingredients">Ingredients</label><br />
+        <textarea id="recipe-ingredients"></textarea><br />
+        <label for="recipe-directions">Directions</label><br />
+        <textarea id="recipe-directions"></textarea><br />
+        <button id="edit-screen-save-btn">Save</button>
+        <button id="edit-screen-close-btn">Close</button>
+    </div>
+    
+    <div id="add-screen">
+        <h3>Add a Recipe</h3>
+        <label for="recipe-title-add">Recipe</label><br />
+        <input id="recipe-title-add" placeholder="Recipe Name" type="text" /><br />
+        <label for="recipe-ingredients-add">Ingredients</label><br />
+        <textarea placeholder='Separate each ingredient with a "\": &#10; &#10; Milk \ 2 Eggs \ 1/3 Cup Sugar' id="recipe-ingredients-add"></textarea><br />
+        <label for="recipe-directions-add">Directions</label><br />
+        <textarea placeholder='Separate each step with a "\": &#10; &#10; Preheat oven to 350°F \ &#10; Combine ingredients in pie crust \ &#10; Bake until crust is golden brown. \' id="recipe-directions-add"></textarea><br />
+        <button id="add-screen-add-btn">Add</button>
+        <button id="add-screen-close-btn">Close</button>
+    </div>
+    
+    <span>(<i class="fa-solid fa-fire"></i>)</span>
+    <h1>Recipe Box</h1>
+    <div id="list">
+        <ul id="recipes">
+    
+        </ul>
+    </div>
+    <div id="current-recipe">
+        <div><h2></h2><i id="delete-btn" class="fa-solid fa-trash"></i><i id="edit-btn" class="fa-solid fa-pen-to-square"></i></div>
+        <div id="display">
+            
+        </div>
+        <div><i id="add-btn" class="fa-solid fa-plus"></i></div>
+    </div>
+</body>
+</html>
